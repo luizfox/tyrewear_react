@@ -1,0 +1,31 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "luiz.tyreusage"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "tyreusage",
+    "packageName": "luiz.tyreusage",
+    "packageFolder": "luiz/tyreusage",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZWU1MzZlYjg0N2QzYjMzYTcxODM5NjZlNTVkM2Q3YWVkNTJkZWNlOWYzNmExMzMwNjM5NmZhNzhkNGM2YmYzODYwYzMxMzRmM2YyNDUwMWExOWQ0NjM2NDYwNTcyMzRjNDdlNTYyZTUzZTE3YTAzNGJhMDJkZjllMWNjYzkzYzA=",
+    "clientFramework": "react",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
