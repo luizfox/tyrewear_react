@@ -5,7 +5,7 @@ import { AvForm, AvField } from 'availity-reactstrap-validation';
 import { Row, Col, Button } from 'reactstrap';
 
 import { IRootState } from 'app/shared/reducers';
-import { getSession } from 'app/shared/reducers/authentication';
+// import { getSession } from 'app/shared/reducers/authentication';
 import PasswordStrengthBar from 'app/shared/layout/password/password-strength-bar';
 import { savePassword, reset } from './password.reducer';
 
@@ -22,7 +22,6 @@ export class PasswordPage extends React.Component<IUserPasswordProps, IUserPassw
 
   componentDidMount() {
     this.props.reset();
-    this.props.getSession();
   }
 
   componentWillUnmount() {
@@ -108,7 +107,7 @@ const mapStateToProps = ({ authentication }: IRootState) => ({
   isAuthenticated: authentication.isAuthenticated
 });
 
-const mapDispatchToProps = { getSession, savePassword, reset };
+const mapDispatchToProps = { savePassword, reset };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;

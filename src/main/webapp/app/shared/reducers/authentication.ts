@@ -96,7 +96,7 @@ export default (state: AuthenticationState = initialState, action): Authenticati
 
 export const displayAuthError = message => ({ type: ACTION_TYPES.ERROR_MESSAGE, message });
 
-export const getSession = () => dispatch =>
+const getSession = () => dispatch =>
   dispatch({
     type: ACTION_TYPES.GET_SESSION,
     payload: axios.get('api/account')
@@ -116,7 +116,7 @@ export const login = (username, password, rememberMe = false) => async (dispatch
       Storage.session.set(AUTH_TOKEN_KEY, jwt);
     }
   }
-  dispatch(getSession());
+  dispatch();
 };
 
 export const clearAuthToken = () => {

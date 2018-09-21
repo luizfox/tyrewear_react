@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
-export class Prediction extends Component {
+export interface IPredictionProp extends DispatchProps {
+  term: string;
+}
+
+export class Prediction extends React.Component<IPredictionProp> {
 
   constructor(props) {
     super(props);

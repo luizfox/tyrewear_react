@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { AvForm, AvField } from 'availity-reactstrap-validation';
 
 import { IRootState } from 'app/shared/reducers';
-import { getSession } from 'app/shared/reducers/authentication';
 import { saveAccountSettings, reset } from './settings.reducer';
 
 export interface IUserSettingsProps extends StateProps, DispatchProps {}
@@ -16,7 +15,6 @@ export interface IUserSettingsState {
 
 export class SettingsPage extends React.Component<IUserSettingsProps, IUserSettingsState> {
   componentDidMount() {
-    this.props.getSession();
   }
 
   componentWillUnmount() {
@@ -99,7 +97,7 @@ const mapStateToProps = ({ authentication }: IRootState) => ({
   isAuthenticated: authentication.isAuthenticated
 });
 
-const mapDispatchToProps = { getSession, saveAccountSettings, reset };
+const mapDispatchToProps = { saveAccountSettings, reset };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof mapDispatchToProps;

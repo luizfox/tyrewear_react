@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 import { REQUEST, SUCCESS, FAILURE } from 'app/shared/reducers/action-type.util';
-import { getSession } from 'app/shared/reducers/authentication';
+// import { getSession } from 'app/shared/reducers/authentication';
 
 export const ACTION_TYPES = {
   UPDATE_ACCOUNT: 'account/UPDATE_ACCOUNT',
@@ -61,7 +61,7 @@ export const saveAccountSettings = account => async dispatch => {
       successMessage: '<strong>Settings saved!</strong>'
     }
   });
-  dispatch(getSession());
+  dispatch();
 };
 
 export const reset = () => ({

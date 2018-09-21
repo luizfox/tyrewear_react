@@ -29,7 +29,7 @@ export default (state: ApplicationProfileState = initialState, action): Applicat
   }
 };
 
-export const getProfile = () => ({
+ const getProfile = () => ({
   type: ACTION_TYPES.GET_PROFILE,
-  payload: axios.get('management/info')
+  payload: axios.get('management/info2')
 });
